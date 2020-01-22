@@ -1,0 +1,9 @@
+Random Person 3465's Discord Bot
+
+You may use this code without crediting Random Person 3465, (RandomPerson0244#0244 on Discord) the creator of the bot.
+
+Replace bot.login("") with bot.login("(put your real token here no parentheses in the quotes)")
+
+Replace const developers = [] with const developers = ["user id 1","user id 2", etc.] (use real user ids)
+
+This is an example of a simple Discord bot.
