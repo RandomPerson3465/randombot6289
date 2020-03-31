@@ -17,6 +17,7 @@ module.exports = {
       await disabledCommands.set(message.guild.id, disabled)
     }
     if (disabled.includes(command.name)) return message.reply("That command is already disabled!")
+    if (!command.disableable) return message.reply("You can't disable that command!")
     disabled.push(command.name)
     await disabledCommands.set(message.guild.id, disabled)
     return message.channel.send(`Successfully disabled command \`${command.name}\`.`)
