@@ -38,7 +38,7 @@ client.on("message", async message => {
     let args = message.content.slice(config.prefix.length).split(/ +/);
     const command = args[0];
     args = args.slice(1) // Command arguments
-    const recievedCommand = client.commands.get(command) || client.commands.find(c => c.a.includes(command))
+    const recievedCommand = client.commands.get(command) || client.commands.find(c => c.aliases.includes(command))
     if (!recievedCommand) return;
     if (recievedCommand.devOnly && !config.devs.includes(message.author.id)) return; // Ignores developer commands used by non-devs
     const disabled = await disabledCommands.get(message.guild.id)
